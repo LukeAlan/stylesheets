@@ -2,7 +2,7 @@
 @name           YouTube PH Theme
 @namespace      github.com/LukeAlan/stylesheets/userstyles/youtube-ph-theme
 @updateURL      https://raw.githubusercontent.com/LukeAlan/stylesheets/master/userstyles/youtube-ph-theme/theme.user.css
-@version        1.0.0
+@version        1.0.2
 @description    This changes the YouTube look to be like your favourite site, I originally did this as a joke, but it's funny as hell and people wanted me to publicly publish this, so, here it is!
 @author         Luke Alan Daniel Wolfe
 ==/UserStyle== */
@@ -14,6 +14,7 @@
         --dark1: #1b1b1b;
         --dark2: #363636;
         --accent: #ff9900;
+        --verifiedlogo: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAAXNSR0IB2cksfwAAAEhQTFRFAAAAEGzbE23dE27dE23eFG/fEW3cbnyIE27dE27ejbjdaaPrTJHn////N4Xk9Pf62e/6Injhzub3rNXyudvznMPl7vHzxeD1nYS+ywAAABh0Uk5TACt8wOb/PQ6Z0P//////////////////5ktwJwAAAL9JREFUeJyFkuEWwxAMhREpLWmZdXv/Nx1aqtrT3R+O44u4iTC2iwuQiBIEZ2cNgFUwNEBpPEmrSgA7wc7U2BPEcWP6SmLO7OCOICYv/UOT2Z6L9XTEEtm84UycybwQubwTXT7/IqKSUZbwOa0hkmk7kKyGO49oInmXDAXF8JAsUIrYkayI1g/RMhciiw3vKMtUR1DNJ9fx4mFWHCUnC9+mDt40am0s5EY17Q22uTQ8f8rTV96wUf0fm6dhux/RH+M2Df20A1e3AAAAAElFTkSuQmCC');
     }
     /* Icon Replacements */
     .yt-icon-container svg g {
@@ -54,14 +55,16 @@
         display: inline-block!important;
         height: 40px;
     }
-    #sections.ytd-guide-renderer > *.ytd-guide-renderer:first-child {
+    #sections.ytd-guide-renderer > *.ytd-guide-renderer:nth-child(3),
+    #sections.ytd-guide-renderer > *.ytd-guide-renderer:nth-child(4),
+    #sections.ytd-guide-renderer > *.ytd-guide-renderer:nth-child(6){
         display: none!important;
     }
     ytd-mini-guide-renderer,
     #items.ytd-mini-guide-renderer,
     ytd-mini-guide-entry-renderer,
     a.ytd-mini-guide-entry-renderer{
-        z-index: 999999999;
+        z-index: 2202;
     }
     a.ytd-mini-guide-entry-renderer yt-icon {
         display: none;
@@ -80,6 +83,11 @@
     /*Search Bar*/
     #container.ytd-searchbox {
         background: var(--dark2)!important;
+        padding: 2px 5px;
+    }
+    ytd-searchbox[has-focus] #container.ytd-searchbox{
+        border-color: rgb(85,85,85)!important;
+        box-shadow: none!important;
     }
     #search-form.ytd-searchbox{
         border-radius: 3px!important;
@@ -111,19 +119,60 @@
         text-transform: capitalize;
     }
     /*Main Page Background*/
-    .ytd-app,
+
     ytd-watch-flexy,
     ytd-browse[page-subtype="channels"],
-    ytd-browse {
+    ytd-browse,
+    ytd-search{
         background: var(--dark0)!important;
     }
     /*Fixes Page Overlapping with the newfound navbar */
     #page-manager.ytd-app {
         margin-left: 0;
     }
-    .ytd-app .ytd-browse {
+    .ytd-app .ytd-browse{
         padding-top: 10px;
     }
+    .ytd-app .ytd-search{
+        padding-top: 15px; 
+    }
+    /*Dropdown Menu Fix*/
+    .iron-dropdown{
+        z-index:999999999;
+    }
+    /*Videos*/
+    yt-img-shadow.ytd-thumbnail{
+        width: 264px;
+        height: 145px;
+    }
+    #video-title.ytd-video-renderer{
+        color: var(--accent);
+        font-size: 15px;
+        letter-spacing:-.5px;
+    }
+    /*Badge Replacements*/
+    yt-icon.ytd-badge-supported-renderer{
+        background: var(--verifiedlogo);
+        background-size: 13px;
+        background-repeat: no-repeat;
+    }
+    yt-icon.ytd-badge-supported-renderer svg g{
+        display:none;
+    }
     /*Channel Pages*/
+    #avatar.ytd-c4-tabbed-header-renderer,
+    #avatar.ytd-c4-tabbed-header-renderer img{
+        border-radius:0%;
+        height: 200px;
+        width: 200px;
+    }
+    #channel-container.ytd-c4-tabbed-header-renderer{
+        background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);
+        
+    }
+    #channel-container.ytd-c4-tabbed-header-renderer,
+    #channel-header.ytd-c4-tabbed-header-renderer{
+        background-color: transparent;
+    }
     /* Coming soon. */
 }
