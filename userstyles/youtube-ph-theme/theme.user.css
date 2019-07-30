@@ -2,7 +2,7 @@
 @name           YouTube PH Theme
 @namespace      github.com/LukeAlan/stylesheets/userstyles/youtube-ph-theme
 @updateURL      https://raw.githubusercontent.com/LukeAlan/stylesheets/master/userstyles/youtube-ph-theme/theme.user.css
-@version        1.0.2
+@version        1.0.3
 @description    This changes the YouTube look to be like your favourite site, I originally did this as a joke, but it's funny as hell and people wanted me to publicly publish this, so, here it is!
 @author         Luke Alan Daniel Wolfe
 ==/UserStyle== */
@@ -131,10 +131,10 @@
         margin-left: 0;
     }
     .ytd-app .ytd-browse{
-        padding-top: 10px;
+        margin-top: 10px;
     }
     .ytd-app .ytd-search{
-        padding-top: 15px; 
+        margin-top: 15px; 
     }
     /*Dropdown Menu Fix*/
     .iron-dropdown{
@@ -160,19 +160,39 @@
         display:none;
     }
     /*Channel Pages*/
-    #avatar.ytd-c4-tabbed-header-renderer,
-    #avatar.ytd-c4-tabbed-header-renderer img{
-        border-radius:0%;
+    #avatar.ytd-c4-tabbed-header-renderer{
         height: 200px;
-        width: 200px;
+        width: unset!important;
+        border-radius:0%;
+    }
+
+    #avatar.ytd-c4-tabbed-header-renderer img{
+        height: 150px;
+        width: 150px!important;
+        max-height: unset;
+        max-width: unset;
+        position: relative;
+        top: 20px;
     }
     #channel-container.ytd-c4-tabbed-header-renderer{
         background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);
-        
+        position:absolute;
+        top: 90px;
+        width: 100%
     }
     #channel-container.ytd-c4-tabbed-header-renderer,
     #channel-header.ytd-c4-tabbed-header-renderer{
         background-color: transparent;
+    }
+    #backgroundFrontLayer.app-header{
+        transform: translate3d(0,0,0)!important
+    }
+    #header.ytd-c4-tabbed-header-renderer{
+        margin-top:0;
+    }
+    ytd-button-renderer.style-destructive[is-paper-button]{
+        top: 225px;
+        position:absolute;
     }
     /* Coming soon. */
 }
