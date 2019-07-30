@@ -2,12 +2,12 @@
 @name           YouTube PH Theme
 @namespace      github.com/LukeAlan/stylesheets/userstyles/youtube-ph-theme
 @updateURL      https://raw.githubusercontent.com/LukeAlan/stylesheets/master/userstyles/youtube-ph-theme/theme.user.css
-@version        1.0.1
+@version        1.0.0
 @description    This changes the YouTube look to be like your favourite site, I originally did this as a joke, but it's funny as hell and people wanted me to publicly publish this, so, here it is!
 @author         Luke Alan Daniel Wolfe
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
-    /* YouTube PH Theme ©Luke Alan 2019 */
+    /* YouTube PH Theme © Luke Alan 2019 */
     /* Root Colors */
     :root {
         --dark0: #000000;
