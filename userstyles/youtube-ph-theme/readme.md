@@ -1,5 +1,5 @@
 # YouTube PH Theme for Stylish (the frowned upon) and Stylus
-this is in ____heavy____ beta, so expect there to be bugs.
+this is in ____heavy____ beta, so expect there to be bugs, just create a new issue and I'll look into it.
 ## Requirements
 [Stylus For Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 [Stylus For Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
