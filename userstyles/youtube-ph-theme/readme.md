@@ -3,4 +3,5 @@ this is in ____heavy____ beta, so expect there to be bugs, just create a new iss
 ## Requirements
 [Stylus For Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 [Stylus For Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
-![Image 1](https://raw.githubusercontent.com/LukeAlan/stylesheets/master/userstyles/youtube-ph-theme/assets/chrome_1IGpHVxps9.png)
+![Image 1](https://this.is-fi.re/9xUeFdo.png)
+![Image 2](https://this.is-fi.re/6grgxcE.png)
