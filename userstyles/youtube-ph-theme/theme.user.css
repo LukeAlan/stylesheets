@@ -39,7 +39,7 @@
     ytd-mini-guide-renderer {
         height: 40px;
         border-top: 1px solid #242424;
-        z-index: 1;
+        z-index: 111;
         width: 100vw;
     }
     #items.ytd-mini-guide-renderer {
@@ -56,6 +56,12 @@
     }
     #sections.ytd-guide-renderer > *.ytd-guide-renderer:first-child {
         display: none!important;
+    }
+    ytd-mini-guide-renderer,
+    #items.ytd-mini-guide-renderer,
+    ytd-mini-guide-entry-renderer,
+    a.ytd-mini-guide-entry-renderer{
+        z-index: 999999999;
     }
     a.ytd-mini-guide-entry-renderer yt-icon {
         display: none;
@@ -75,12 +81,20 @@
     #container.ytd-searchbox {
         background: var(--dark2)!important;
     }
-    #container.ytd-searchbox,
+    #search-form.ytd-searchbox{
+        border-radius: 3px!important;
+        height: 26px;
+    }
+    #search-input.ytd-searchbox-spt input{
+    font: 14 Arial;
+    font-weight: 100;
+    }
     button#search-icon-legacy {
         border: none!important;
     }
     #search-icon-legacy.ytd-searchbox {
         background: var(--accent);
+        width: 62px;
     }
     #search-icon-legacy.ytd-searchbox:hover {
         background: #ffa31a;
@@ -98,12 +112,18 @@
     }
     /*Main Page Background*/
     .ytd-app,
-    html {
+    ytd-watch-flexy,
+    ytd-browse[page-subtype="channels"],
+    ytd-browse {
         background: var(--dark0)!important;
     }
     /*Fixes Page Overlapping with the newfound navbar */
     #page-manager.ytd-app {
-        margin-top: 97px;
         margin-left: 0;
     }
+    .ytd-app .ytd-browse {
+        padding-top: 10px;
+    }
+    /*Channel Pages*/
+    /* Coming soon. */
 }
