@@ -2,7 +2,7 @@
 @name           YouTube PH Theme
 @namespace      github.com/LukeAlan/stylesheets/userstyles/youtube-ph-theme
 @updateURL      https://raw.githubusercontent.com/LukeAlan/stylesheets/master/userstyles/youtube-ph-theme/theme.user.css
-@version        1.0.4
+@version        1.0.5
 @description    This changes the YouTube look to be like your favourite site, I originally did this as a joke, but it's funny as hell and people wanted me to publicly publish this, so, here it is!
 @author         Luke Alan Daniel Wolfe
 ==/UserStyle== */
@@ -145,10 +145,6 @@
         z-index:999999999;
     }
     /*Videos*/
-    yt-img-shadow.ytd-thumbnail{
-        width: 264px;
-        height: 145px;
-    }
     #video-title{
         color: var(--accent)!important;
         font-size: 15px!important;
