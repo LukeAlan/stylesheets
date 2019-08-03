@@ -8,6 +8,7 @@
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
     /* YouTube PH Theme © Luke Alan 2019 */
+    /* if anyone wants to do the fullsize hamburger menu please do it, i don't have the patience to do so. */
     /* Root Colors */
     :root {
         --dark0: #000000;
